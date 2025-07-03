@@ -1,4 +1,4 @@
-### README.md – CSV Upload & Query API with AI Assistant
+CSV Upload & Query API with AI Assistant
 
 ---
 
@@ -48,10 +48,22 @@ csv_api_project/
 ### 1. ✅ Clone the Repo & Navigate to the Project
 ```bash
 git clone <your-repo-url>
-cd csv_api_project
+cd IBee_Assignment
 ```
+### 2. 🔐 Setting Up OpenAI API Key
 
-### 2. 📦 Create and Activate a Virtual Environment
+To enable the AI assistant feature, you need to set your OpenAI API key.
+
+1. Copy the `.env.example` file to a new file named `.env`:
+   ```bash
+   cp .env.example .env
+Open the .env file and paste your actual OpenAI API key:
+```bash
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+The application will automatically load the key using the python-dotenv package.
+
+### 3. 📦 Create and Activate a Virtual Environment
 ```bash
 python -m venv venv
 venv\Scripts\activate   # For Windows
@@ -59,12 +71,12 @@ venv\Scripts\activate   # For Windows
 source venv/bin/activate  # For Linux/macOS
 ```
 
-### 3. 📥 Install Requirements
+### 4. 📥 Install Requirements
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. ▶️ Run the FastAPI Server
+### 5. ▶️ Run the FastAPI Server
 ```bash
 uvicorn app.main:app --reload
 ```
@@ -149,12 +161,8 @@ curl -X 'POST' \
 
 ---
 
-## ✅ Status
-✅ Fully working, tested, and production-ready (student-level) backend project. AI assistant is integrated but requires valid OpenAI quota to function.
-
----
 
 ## 📧 Contact
 Built by **Yasir A**  
 📩 yasircysec@gmail.com  
-🧠 Guided by ChatGPT (OpenAI)
+
